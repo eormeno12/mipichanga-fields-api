@@ -4,7 +4,7 @@ import * as Joi from 'joi';
 import config from './config';
 import { DatabaseModule } from './database/database.module';
 import { enviroments } from './enviroments';
-import { UsersModule } from './fields/fields.module';
+import { FieldsModule } from './fields/fields.module';
 
 @Module({
   imports: [
@@ -24,7 +24,7 @@ import { UsersModule } from './fields/fields.module';
         FRONTEND_DOMAIN: Joi.string().required(),
       }),
     }),
-    UsersModule,
+    FieldsModule,
     DatabaseModule,
   ],
 })
