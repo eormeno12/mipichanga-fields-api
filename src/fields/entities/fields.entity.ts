@@ -24,11 +24,7 @@ export class Field extends Document {
   @Prop({ type: String, required: true })
   name: string;
 
-  @Prop({
-    _id: true,
-    type: String,
-    required: true,
-  })
+  @Prop({ type: String, required: true })
   imageUrl: string;
 
   @Prop({ type: FieldLocationSchema, required: true })

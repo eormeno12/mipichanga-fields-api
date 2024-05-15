@@ -10,10 +10,6 @@ export default registerAs('config', () => {
       host: process.env.MONGO_HOST,
       connection: process.env.MONGO_CONNECTION,
     },
-    jwt: {
-      secret: process.env.JWT_SECRET,
-      expiresIn: process.env.JWT_EXPIRES_IN,
-    },
     frontend: {
       url: process.env.FRONTEND_URL,
       domain: process.env.FRONTEND_DOMAIN,
