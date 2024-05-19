@@ -1,37 +1,36 @@
 import { ApiProperty, PartialType } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
 import { IsNotEmpty, IsString, IsUrl, ValidateNested } from 'class-validator';
-import { FieldLocation } from '../entities/fields.entity';
 
-export class FieldLocationDto implements FieldLocation {
-  @ApiProperty({ description: 'The prefix of the location' })
+export class FieldLocationDto {
+  @ApiProperty({ description: 'El prefijo de la ubicación' })
   @IsNotEmpty()
   @IsString()
   readonly prefix: string;
 
-  @ApiProperty({ description: 'The city of the location' })
+  @ApiProperty({ description: 'La ciudad de la ubicación' })
   @IsNotEmpty()
   @IsString()
   readonly city: string;
 
-  @ApiProperty({ description: 'The country of the location' })
+  @ApiProperty({ description: 'El país de la ubicación' })
   @IsNotEmpty()
   @IsString()
   readonly country: string;
 }
 
 export class CreateFieldDto {
-  @ApiProperty({ description: 'The name of the field' })
+  @ApiProperty({ description: 'Nombre de la cancha' })
   @IsNotEmpty()
   @IsString()
   readonly name: string;
 
-  @ApiProperty({ description: 'The image URL of the field' })
+  @ApiProperty({ description: 'URL de la imagen de la cancha' })
   @IsNotEmpty()
   @IsUrl()
   readonly imageUrl: string;
 
-  @ApiProperty({ description: 'The location of the field' })
+  @ApiProperty({ description: 'Ubicación de la cancha' })
   @IsNotEmpty()
   @ValidateNested()
   @Type(() => FieldLocationDto)

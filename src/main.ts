@@ -17,8 +17,11 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('MiPichanga (Fields) - API')
-    .setDescription('Documentación del microservicio MiPichanga (Fields) - API')
+    .setDescription(
+      'API para la gestión de canchas en MiPichanga. Permite crear, actualizar y eliminar canchas, así como obtener información detallada de cada una.',
+    )
     .setVersion('1.0')
+    .addTag('fields', 'Endpoints relacionados con la gestión de canchas')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
