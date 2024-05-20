@@ -23,8 +23,8 @@ ENV MONGO_HOST=107.23.30.220
 ENV MONGO_CONNECTION=mongodb
 
 ENV PORT=3002
-ENV FRONTEND_URL='http://localhost'
-ENV FRONTEND_DOMAIN=localhost
+ENV FRONTEND_URL='http://host.docker.internal'
+ENV FRONTEND_DOMAIN=host.docker.internal
 
 # Expose the port that the application will run on
 EXPOSE 3002
